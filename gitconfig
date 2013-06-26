@@ -1,12 +1,36 @@
-[core]
-	excludesfile = /Users/mattmirande/.gitignore_global
-	editor = mvim -f
 [user]
-	name = busticated
-	email = itsbusticated@gmail.com
+    name = John Clayton
+    email = john@codemonkeylabs.com
 [github]
-	user = busticated
+    user = jsclayton
 [push]
-	default = matching
+    default = simple
 [alias]
-    pullall = !sh ~/.dotfiles/bash/git-pullallsubdirs.sh
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    ignored = clean -dXn
+[color]
+    ui = auto
+[core]
+    excludesfile = /Users/john/.gitignore_global
+[merge]
+    tool = p4merge
+[mergetool "p4merge"]
+    cmd = p4merge
+    keepTemporaries = false
+    trustExitCode = false
+    keepBackup = false
+[difftool "sourcetree"]
+    cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
+    path = 
+[mergetool "sourcetree"]
+    cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+    trustExitCode = true
+[diff]
+    tool = p4merge
+[difftool]
+    prompt = false
+[mergetool]
+    prompt = false
+    keepBackup = false
+[credential]
+    helper = osxkeychain

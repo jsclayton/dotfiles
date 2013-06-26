@@ -12,19 +12,17 @@ linkUserConfigFiles(){
 
 # Setup symlinks for user config files
 files=(
-    'profile'
-    'gvimrc'
-    'vimrc'
-    'hgrc'
+    #'profile'
+    #'gvimrc'
+    #'vimrc'
+    #'hgrc'
     'gitconfig'
     'gitignore_global'
-    'jshintrc'
-    'NERDTreeBookmarks'
+    #'jshintrc'
+    #'NERDTreeBookmarks'
 )
 # TODO: Make Dirs ~/.vim/backup, ~/.vim/bundle, ~/.vim/tmp
 # TODO: git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 linkUserConfigFiles ${files[@]}
 
-# setup symlinks to misc configs
-ln -siv $DOTFILESDIR/apache/httpd.conf /Applications/MAMP/conf/apache/httpd.conf
 exit
