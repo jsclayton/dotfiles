@@ -202,9 +202,13 @@ set modeline
 set modelines=10
 
 " Default color scheme
-color solarized
 syntax enable
+let g:solarized_termtrans = 1
+let g:solarized_termcolors = 256
+"let g:solarized_visibility = "high"
+"let g:solarized_contrast = "high"
 set background=dark
+colorscheme solarized
 
 " Directories for swp files
 set backupdir=~/.vim/backup
