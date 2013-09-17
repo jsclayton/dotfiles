@@ -8,6 +8,7 @@
 [alias]
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     ignored = clean -dXn
+	fuckit = !git clean -d -x -f && git reset --hard
 [color]
     ui = auto
 [core]
