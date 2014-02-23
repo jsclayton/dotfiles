@@ -1,7 +1,7 @@
 #export CLICOLOR=1
 #export LSCOLORS=ExFxCxDxBxegedabagacad
 export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH=node_modules/.bin:/Developer/android-sdk/tools:/Developer/android-sdk/platform-tools:/Applications/Postgres.app/Contents/MacOS/bin:/usr/local/share/npm/bin:${PATH}
+export PATH=node_modules/.bin:/Applications/Postgres93.app/Contents/MacOS/bin:/usr/local/share/npm/bin:${PATH}
 
 eval "$(rbenv init -)"
 

@@ -15,13 +15,13 @@ linkUserConfigFiles(){
 # Setup symlinks for user config files
 files=(
     'profile'
-    'gvimrc'
-    'vimrc'
+    #'gvimrc'
+    #'vimrc'
     #'hgrc'
     'gitconfig'
     'gitignore_global'
-    'jshintrc'
-    'NERDTreeBookmarks'
+    #'jshintrc'
+    #'NERDTreeBookmarks'
 )
 
 mkdir -p ~/.vim/backup
