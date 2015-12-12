@@ -14,25 +14,30 @@
 [core]
 	excludesfile = /Users/john/.gitignore_global
 	editor = /usr/bin/vim
-[merge]
-    tool = p4merge
-[mergetool "p4merge"]
-    cmd = p4merge
-    keepTemporaries = false
-    trustExitCode = false
-    keepBackup = false
+[merge "mergepbx"]
+    name = XCode project files merger
+    driver = mergepbx %O %A %B
 [difftool "sourcetree"]
-	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-[diff]
-    tool = p4merge
 [difftool]
     prompt = false
 [mergetool]
     prompt = false
     keepBackup = false
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
 [credential]
-    helper = osxkeychain
+	helper = osxkeychain
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

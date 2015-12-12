@@ -1,9 +1,10 @@
 #export CLICOLOR=1
 #export LSCOLORS=ExFxCxDxBxegedabagacad
 export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH=node_modules/.bin:/Applications/Postgres93.app/Contents/MacOS/bin:/usr/local/share/npm/bin:${PATH}
+export PATH=node_modules/.bin:/Applications/Postgres93.app/Contents/MacOS/bin:/usr/local/share/npm/bin:/Applications/Android\ Studio.app/sdk/tools:/Applications/Android\ Studio.app/sdk/platform-tools:${PATH}
 
 eval "$(rbenv init -)"
+. ~/.nvm/nvm.sh
 
 # bash completion helper (see: http://bash-completion.alioth.debian.org/ )
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
